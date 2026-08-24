@@ -4,7 +4,7 @@
 
 > Catch the claim your RFP copilot would confidently submit.
 
-Proofline is a portfolio-grade pre-submission control layer that determines whether every material RFP claim is supported, applicable, current, and approved before it becomes a buyer-facing commitment.
+Proofline is a working AI MVP for pre-submission response integrity. It accepts a completed RFP response and its supporting evidence, decomposes buyer-facing commitments into atomic claims, verifies support and scope, quotes the governing evidence, and proposes safe language before submission.
 
 ## Why this product
 
@@ -16,15 +16,16 @@ Proofline treats every response as a set of atomic commercial claims. Each claim
 
 It is intentionally not another “upload a document and generate prose” demo. The product models the defensible chain from requirement to evidence to atomic claim to human approval to export.
 
-## Demo workflow
+## Working MVP workflow
 
-1. Load the fictional, industry-neutral Northstar Group enterprise vendor RFP.
-2. Decompose completed responses into atomic commercial claims.
-3. Review admissibility decisions and deterministic submission gates.
-4. Inspect the exact evidence span and six scope dimensions carried by it.
-5. Apply qualified language only when evidence supports a narrower statement.
-6. Route exceptions to the accountable authority—not merely a past contributor.
-7. Export a reproducible submission manifest.
+1. Upload one completed RFP response in PDF, Word, Excel, CSV, or text format.
+2. Add the policies, contracts, security documents, and approvals that should support it.
+3. Run a live OpenAI Responses API analysis with structured output.
+4. Review atomic claims as Admissible, Qualify, Approval required, or Blocked.
+5. Inspect verbatim evidence quotes, source locations, scope findings, and accountable owners.
+6. Export the audit-ready claim ledger as CSV.
+
+The public portfolio deployment supports bring-your-own OpenAI API key. The key and uploaded files are used only for the analysis request and are not persisted by Proofline. A planted-risk Northstar sample is included so the full workflow can be tested without company documents.
 
 ## Deliberately planted integrity traps
 
@@ -76,9 +77,16 @@ The default demo uses a North America profile with no sector overlay. Proofline 
 - Submission-gate recall and reproducibility
 - Time to approved draft
 
-## Product architecture for the next phase
+## MVP architecture
 
-The current deployment is an interactive deterministic portfolio demo—not a live AI service. A production implementation would add isolated document ingestion, permission-aware retrieval, evidence-span extraction, metadata-filtered scope evaluation, claim-level entailment checks, deterministic policy gates, immutable audit events, and format-preserving Word/Excel export.
+- Browser-based multi-file intake with explicit response and evidence roles
+- Server-side OpenAI Responses API call; API keys are never shipped in client code
+- Native file inputs for PDF, DOCX, XLSX, CSV, and text evidence
+- Strict JSON Schema output for reproducible rendering and export
+- Prompt-injection boundary that treats every uploaded document as untrusted data
+- No application persistence in the public MVP
+
+A production implementation would add authenticated tenant isolation, permission-aware retrieval, durable evidence libraries, deterministic policy gates, immutable audit events, evaluation harnesses, rate limiting, and format-preserving Word/Excel round trips.
 
 ## Local development
 
@@ -88,3 +96,5 @@ npm run dev
 ```
 
 Build for production with `npm run build`.
+
+Set `OPENAI_API_KEY` for a host-funded deployment or enter a key in the public MVP. `OPENAI_MODEL` defaults to `gpt-5.4-mini`.
