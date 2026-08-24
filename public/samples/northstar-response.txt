@@ -1,0 +1,22 @@
+NORTHSTAR GROUP — ENTERPRISE VENDOR RESPONSE
+Responding entity: Proofline Systems, Inc.
+Proposed product: Enterprise SaaS
+Territories: United States, Canada, and Mexico
+
+1. SERVICE AVAILABILITY
+Proofline guarantees 99.99% monthly platform availability for Northstar under its standard Enterprise agreement.
+
+2. DATA RETENTION
+All Northstar customer data will be deleted within 90 days after contract termination.
+
+3. ENCRYPTION
+Customer data is encrypted at rest using AES-256 and in transit using TLS 1.2 or higher.
+
+4. DATA LOCATION AND SUPPORT ACCESS
+All production processing and support access for Northstar will occur exclusively in the United States and Canada.
+
+5. ACCESSIBILITY
+The platform complies with every accessibility law applicable to this procurement across North America.
+
+6. INSURANCE
+Proofline's current insurance policy covers operations throughout the United States, Canada, and Mexico in all requested currencies.
