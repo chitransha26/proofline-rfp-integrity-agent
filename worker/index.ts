@@ -81,8 +81,8 @@ async function analyzeResponse(request: Request, env: Env): Promise<Response> {
   const contentLength = Number(request.headers.get("content-length") || 0);
   if (contentLength > 28 * 1024 * 1024) return json({ error: "The combined upload is too large for this MVP." }, 413);
 
-  const apiKey = request.headers.get("x-openai-key")?.trim() || env.OPENAI_API_KEY?.trim();
-  if (!apiKey) return json({ error: "Add an OpenAI API key to run the public MVP. It is used for this request only and is never stored by Proofline." }, 401);
+  const apiKey = env.OPENAI_API_KEY?.trim();
+  if (!apiKey) return json({ error: "Proofline's AI service is not configured yet. The site owner needs to add the server connection." }, 503);
 
   let body: { context?: string; files?: AnalysisFile[] };
   try { body = await request.json(); } catch { return json({ error: "The upload request was not valid JSON." }, 400); }
