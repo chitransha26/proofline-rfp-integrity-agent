@@ -1,0 +1,41 @@
+PROOFLINE SYSTEMS — CONTROLLED EVIDENCE PACK
+Evidence snapshot: August 2026
+
+SOURCE: Enterprise SLA v3, Section 2
+Authority: Commercial Legal
+Scope: Enterprise tier; SaaS; standard MSA; United States and Canada
+Valid: May 2026 through May 2027
+Exact text: "Provider will make the Enterprise Service available 99.9% of each calendar month."
+Restriction: A 99.99% SLA was approved only in the negotiated Aurora customer agreement and is not reusable.
+
+SOURCE: Data Retention Policy v5, Section 4.2
+Authority: Privacy
+Scope: All cloud products; global; standard policy
+Valid: March 2026 to current
+Exact text: "Production customer data will be deleted no later than thirty (30) days following termination, subject to documented legal-retention exceptions."
+Supersedes: Data Retention Policy v4, which used a 90-day period.
+
+SOURCE: Encryption Standard v3, Sections 3–4
+Authority: Security
+Scope: All cloud products; SaaS; global
+Valid: July 2026 through July 2027
+Exact text: "Customer data at rest: AES-256. Data in transit: TLS 1.2 or later."
+
+SOURCE: Subprocessor Register, August 2026
+Authority: Privacy
+Scope: Enterprise SaaS; North America
+Exact text: "Primary production regions: United States and Canada. Support telemetry locations: under review, including potential access from Mexico."
+
+SOURCE: Accessibility Conformance Report, July 2026
+Authority: Accessibility Program
+Scope: Enterprise web application
+Valid: July 2026 through July 2027
+Exact text: "Evaluation scope: Enterprise web application; conformance assessed against the criteria enumerated herein."
+Limitation: This report does not determine which federal, state, provincial, territorial, or contractual requirements apply to a specific procurement.
+
+SOURCE: Certificate of Insurance, August 2026
+Authority: Finance
+Scope: Corporate coverage; United States and Canada
+Valid: August 2026 through August 2027
+Exact text: "Territory: United States and Canada. Limits expressed in United States Dollars."
+Limitation: Mexico and CAD/MXN currency equivalency are not evidenced by this certificate.
