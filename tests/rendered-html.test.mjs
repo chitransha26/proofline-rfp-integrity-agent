@@ -30,13 +30,13 @@ test("renders the working AI intake experience", async () => {
   assert.match(html, /Run integrity preflight/);
 });
 
-test("protects the analysis route when no API key is configured", async () => {
+test("requires a server-side AI connection", async () => {
   const worker = await loadWorker();
   const response = await worker.fetch(
     new Request("http://localhost/api/analyze", { method: "POST", headers: { "content-type": "application/json" }, body: "{}" }),
     env,
     ctx,
   );
-  assert.equal(response.status, 401);
-  assert.match(await response.text(), /OpenAI API key/);
+  assert.equal(response.status, 503);
+  assert.match(await response.text(), /site owner/);
 });
